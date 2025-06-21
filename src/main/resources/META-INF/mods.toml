@@ -1,0 +1,46 @@
+# This is the main configuration file for your mod.
+# It's used by Forge to understand how to load and display your mod.
+
+modLoader="javafml"
+loaderVersion="[43,)"
+license="All Rights Reserved"
+issueTrackerURL="https://github.com/fl/TinkerEnchanterMod/issues"
+
+# The main mod definition.
+[[mods]]
+modId="tinkerenchanter"
+version="1.0"
+displayName="Tinkers Enchanter"
+
+# --- THIS IS THE CRUCIAL LINE THAT WAS ADDED ---
+# It tells Forge to load your Mixin configuration file.
+mixinConfigs = [ "tinkerenchanter.mixins.json" ]
+
+authors="fl"
+description='''
+Allows Tinkers' Construct tools and armor to be enchanted using an anvil.
+'''
+
+# A dependency relationship for your mod.
+# This ensures that Forge and Minecraft are present.
+[[dependencies.tinkerenchanter]]
+modId="forge"
+mandatory=true
+versionRange="[43,)"
+ordering="NONE"
+side="BOTH"
+
+[[dependencies.tinkerenchanter]]
+modId="minecraft"
+mandatory=true
+versionRange="[1.19.2,1.20)"
+ordering="NONE"
+side="BOTH"
+
+# This dependency ensures that Tinkers' Construct is installed.
+[[dependencies.tinkerenchanter]]
+modId="tconstruct"
+mandatory=true
+versionRange="[3.6,)"
+ordering="NONE"
+side="BOTH"

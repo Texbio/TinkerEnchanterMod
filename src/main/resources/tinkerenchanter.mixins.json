@@ -1,0 +1,10 @@
+{
+  "required": true,
+  "package": "com.fl.tinkerenchanter.mixins",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "ModifiableItemMixin"
+  ],
+  "client": [],
+  "minVersion": "0.8"
+}
